@@ -21,6 +21,6 @@ curl -X "POST" -v localhost:8080/diff -H "Content-Type: application/json" -d '{"
 Test PATCH:
 
 ```bash
-curl -X "POST" -v localhost:8080/patch -H "Content-Type: application/json" -d '{"source":[{"name":"a"},{"name":"b"},{"name":"c"}],"patch":[{"op":"remove","path":"/0"},{"op":"remove","path":"/2"}]}'
+curl -X "POST" -v localhost:8080/patch -H "Content-Type: application/json" -d '{"source":[{"name":"a"},{"name":"b"},{"name":"c"}],"patch":[{"op":"remove","path":"/0"},{"op":"remove","path":"/1"}]}'
 ```
 
