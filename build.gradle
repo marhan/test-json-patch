@@ -1,0 +1,38 @@
+buildscript {
+	repositories {
+		maven { url "http://repo.spring.io/libs-release" }
+	}
+	dependencies { 
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:1.0.1.RELEASE") 
+	}
+}
+
+apply plugin: "java"
+apply plugin: "eclipse"
+apply plugin: "idea"
+apply plugin: "spring-boot"
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+jar {
+	baseName = "test-json-patch"
+	version =  "0.1.0"
+}
+
+repositories {
+	mavenCentral()
+	maven { url "http://repo.spring.io/libs-release" }
+	mavenLocal()
+}
+
+dependencies {
+	compile("org.springframework.boot:spring-boot-starter-web")
+	compile("com.fasterxml.jackson.core:jackson-databind")
+	compile("com.github.fge:json-patch:1.6");
+//	compile("com.github.fge:json-patch:1.7-SNAPSHOT");
+}
+
+task wrapper(type: Wrapper) { 
+	gradleVersion = "1.11" 
+}
