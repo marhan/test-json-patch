@@ -1,6 +1,6 @@
 # test-json-patch
 
-A simple REST API for testing json-patch
+A simple REST API for testing [json-patch](https://github.com/fge/json-patch)
 
 ## Build and Run
 
