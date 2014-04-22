@@ -37,13 +37,6 @@ import com.github.fge.jsonpatch.diff.JsonDiff;
 @RequestMapping("/")
 public class MainController {
 
-	private ObjectMapper objectMapper;
-
-	@Autowired
-	public MainController(ObjectMapper objectMapper) {
-		this.objectMapper = objectMapper;
-	}
-	
 	@RequestMapping(value = "/diff", method = RequestMethod.POST, consumes = "application/json", produces = {
 			"application/json", "application/json-patch+json" })
 	public JsonNode diff(@RequestBody JsonNode data) {
