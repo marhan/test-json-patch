@@ -29,8 +29,7 @@ repositories {
 dependencies {
 	compile("org.springframework.boot:spring-boot-starter-web")
 	compile("com.fasterxml.jackson.core:jackson-databind")
-	compile("com.github.fge:json-patch:1.6");
-//	compile("com.github.fge:json-patch:1.7-SNAPSHOT");
+	compile("com.github.fge:json-patch:1.7");
 }
 
 task wrapper(type: Wrapper) { 
